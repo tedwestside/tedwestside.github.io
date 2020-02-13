@@ -804,12 +804,12 @@ h1, h2, h3, h4, h5,
 .section-title {
   font-size: 3rem;
   color: #352961;
-  margin-bottom: 1.8rem;
+  margin-bottom: 0.1rem;
   font-weight: 700;
   max-width: 1000px; 
   text-align: center;}
   .section-title b{
-    font-size: 80px;
+    font-size: 70px;
   }
   .sub-section-title {
     margin: 0px !important;
@@ -1376,6 +1376,10 @@ h1, h2, h3, h4, h5,
 
 .context-text > p{
   color: #000
+}
+
+.small-title{
+  margin-bottom: 10px;
 }
 
 .join-btn {
