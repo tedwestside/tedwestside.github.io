@@ -706,12 +706,16 @@ h1, h2, h3, h4, h5,
   background: linear-gradient(135deg, #8186d5 0%, #494ca2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8186d5', endColorstr='#494ca2', GradientType=1 ); }
 
+.nav-link-end {
+  /* background-color: #fff; */
+}
+
 .intro-section {
   position: relative; 
   background-image: url(../images//BG.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 5% 5%;
+  background-position: 15% 100px;
   background-attachment: scroll;}
   @media (max-width: 500px) {
     .intro-section {
