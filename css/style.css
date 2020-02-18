@@ -191,6 +191,13 @@ h1, h2, h3, h4, h5,
 .text-black-opacity-05 {
   color: rgba(0, 0, 0, 0.5); }
 
+.menu-top {
+  transform: translateX(-50px);
+}
+  @media (max-width: 1300px) {
+    .menu-top {
+      transform: translateX(0px); } }
+
 .hover-bg-enlarge {
   overflow: hidden;
   position: relative; }
@@ -616,7 +623,7 @@ h1, h2, h3, h4, h5,
     color: #000; }
     @media (max-width: 700.98px) {
       .sticky-wrapper .site-menu-toggle {
-        color: #fff; } }
+        color: #000000; } }
   .sticky-wrapper .site-navbar {
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
@@ -712,7 +719,10 @@ h1, h2, h3, h4, h5,
       background-repeat: no-repeat;
       background-size: contain !important;
       background-attachment: scroll;
-      background-position: 0% 0%;} }
+      background-position: 0% 0%;}
+    .proms-page-content{
+      padding-top: 100px !important;
+    } }
   @media (max-width: 768px) {
     .intro-section {
       background-image: url(../images//BG_tablet.png); 
@@ -726,7 +736,14 @@ h1, h2, h3, h4, h5,
       background-repeat: no-repeat;
       background-size: cover;
       background-attachment: scroll;
-      background-position: 0% top;} }
+      background-position: 0% top;}
+      .proms-page-intro {
+        background-image: url(../images//BG_tablet.png); 
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-attachment: scroll;
+        background-position: 100% top;}
+      } 
   .intro-section, .intro-section .container .row {
 
     min-height: 1000px; }
@@ -1379,6 +1396,55 @@ h1, h2, h3, h4, h5,
   color: #000
 }
 
+.card{
+  height: 100%;
+}
+
+.card-title{
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #352961;
+}
+
+.sub-card-title{
+  font-size: 1.0rem !important;
+  text-align: center !important;
+}
+
+.card-prom{
+  margin-bottom: 20px;
+}
+
+.card-prom-name{
+  display: flex;
+  min-height: 75px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-text{
+  text-align: center !important;
+}
+
+.proms-list-container{
+  margin-top: 50px;
+  width: 50%;
+}
+  @media (max-width: 500px) {
+    .proms-list-container {
+      width: 85% !important;
+      margin-left: 30px !important; } }
+  @media (max-width: 768px) {
+    .proms-list-container {
+      width: 95%;
+      margin-left: 15px; } }
+  @media (min-width: 1200px) {
+    .proms-list-container {
+      margin-left: 50px; } }
+  @media (max-width: 1300px) {
+    .proms-list-container {
+      margin-left: 50px; 
+      width: 80%;} }
 .small-title{
   margin-bottom: 10px;
 }
