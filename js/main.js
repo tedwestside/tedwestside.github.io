@@ -313,12 +313,12 @@ jQuery(document).ready(function ($) {
 
 	//Mobile Link click
 	var MobileNavigation = function () {
-		$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function (e) {
-			if (!e.target.getAttribute('islocalurl')) {
-				e.preventDefault();
-				window.open("//play.sbotop123.com", "_self")
-			}
-		});
+		// $("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function (e) {
+		// 	if (!e.target.getAttribute('islocalurl')) {
+		// 		e.preventDefault();
+		// 		window.open("//play.sbotop123.com", "_self")
+		// 	}
+		// });
 
 		$("body").on("click", ".legal__link, .payment__link, .misc__link, .social__link, .logo__link", function (e) {
 			var md = new MobileDetect(window.navigator.userAgent);
@@ -375,5 +375,13 @@ jQuery(document).ready(function ($) {
 	}
 	counter();
 
+	$(window).scroll(function() {
+		let distance = 20;
+		if($(window).scrollTop() + $(window).height() > $(document).height() - $('.footer-section').height()-distance) {
+				$('.join-btn').addClass('fixed_button');
+		}else{
+				$('.join-btn').removeClass('fixed_button');
+		}
+ });
 
 });
