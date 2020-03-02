@@ -375,13 +375,17 @@ jQuery(document).ready(function ($) {
 	}
 	counter();
 
-	$(window).scroll(function() {
-		let distance = 20;
-		if($(window).scrollTop() + $(window).height() > $(document).height() - $('.footer-section').height()-distance) {
-				$('.join-btn').addClass('fixed_button');
-		}else{
-				$('.join-btn').removeClass('fixed_button');
-		}
- });
+	function checkOffset() {
+		if ($('#signup-hud-float').offset().top + $('#signup-hud-float').height()
+			>= $('.footer-section').offset().top - 10)
+			$('#signup-hud-float').css('position', 'absolute');
+		if ($(document).scrollTop() + window.innerHeight < $('.footer-section').offset().top)
+			$('#signup-hud-float').css('position', 'fixed'); // restore when you scroll up
+		// $('#signup-hud-float').text($(document).scrollTop() + window.innerHeight);
+	}
+
+	$(window).scroll(function () {
+		checkOffset();
+	});
 
 });
